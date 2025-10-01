@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- agregamos materialize-->
+   <!-- Materialize CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+<!-- Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tendencias 2025 - Top 5</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href=estilo.css rel="stylesheet">
+  <!-- Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- Tu script para inicializar el FAB en todas las páginas -->
+<script src="js/fab.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background: url("https://img.impactotic.co/wp-content/uploads/2025/01/15144549/Tendencias-de-Big-Data-para-el-2025.jpg") no-repeat center center;
+      background-size: cover;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 0;
+    }
+
+    .hero div {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #e1e3e4;
+      text-shadow: 
+      0 0 10px rgba(0,200,255,0.8),
+      0 0 20px rgba(0,200,255,0.8),
+      0 0 30px rgba(0,200,255,0.8),
+      0 0 40px rgba(0,200,255,0.7),
+      0 0 70px rgba(0,200,255,0.6);
+    }
+
+    .hero p {
+      margin-top: 10px;
+      color: #eee;
+      font-size: 1.2rem;
+    }
+
+    /* CARRUSEL */
+    .carousel {
+      position: relative;
+      max-width: 800px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    }
+
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #1e293b;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+    }
+
+    .carousel-text {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .carousel-text h2 {
+      color: #fbbf24;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    /* BOTONES DEL CARRUSEL */
+    .carousel button {
+      position: absolute;
+      top: 40%; /* centrado en la imagen */
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.6);
+      border: none;
+      color: #fff;
+      font-size: 1.8rem;
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 50%;
+      z-index: 2;
+    }
+
+    .carousel button:hover {
+      background: rgba(0,200,255,0.7);
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+
+
+    /* BLOQUES DETALLADOS */
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; /* centramos verticalmente */
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+
+    .section img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    }
+
+    .section-content {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .section-content h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #38bdf8;
+    }
+
+    .section-content h3 {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: #fbbf24;
+    }
+
+    .section-content ul {
+      margin-left: 20px;
+    }
+
+    .section-content li {
+      margin: 6px 0;
+    }
+
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    /* COLLAGE */
+    .collage {
+      max-width: 1100px;
+      margin: 60px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 0 20px;
+    }
+
+    .collage img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      height: 200px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .collage-title {
+      text-align: center;
+      font-size: 2rem;
+      margin: 40px 0 20px;
+      color: #d1eaf5;
+      text-shadow: 
+      0 0 10px rgba(0,200,255,0.8),
+      0 0 20px rgba(0,200,255,0.6);
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #111;
+      color: #aaa;
+      padding: 25px 15px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer h2 {
+      margin: 0;
+      font-size: 20px;
+      color: #38bdf8;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    footer hr {
+      border: none;
+      border-top: 1px solid #444;
+      margin: 15px 0;
+    }
+
+    footer small {
+      font-size: 12px;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column !important;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- NAVBAR -->
+  <nav class="blue darken-4">
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">Proyecto</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="IA.HTML">Inteligencia Artificial</a></li>
+        <li><a href="machine_learning.html">Machine Learning</a></li>
+        <li><a href="Tecnologias.html">Tecnologías Emergentes</a></li>
+        <li><a href="Tendencias.html">Tendencias</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <h1>Top 5 Tendencias 2025</h1>
+      <p>Explora las innovaciones que marcarán el futuro.</p>
+    </div>
+  </section>
+
+ <div class="carousel">
+  <a class="carousel-item" href="#one!"><img src="https://www.gsoft.es/wp-content/uploads/2025/05/como-empezar-a-usar-dashboards-para-monitorizar-tu-negocio.jpg"></a>
+  <a class="carousel-item" href="#two!"><img src="https://www.zabala.es/wp-content/uploads/2023/11/Inteligencia-artificial-y-consultoria-1200x675.jpg"></a>
+  <a class="carousel-item" href="#three!"><img src="https://www.obicex.es/sites/obicex/files/styles/blog_desktop/public/images/blog/diferencia-entre-realidad-virtual-y-aumentada.jpg?itok=VVGZsTnQ"></a>
+  <a class="carousel-item" href="#four!"><img src="https://cdn.bap-software.net/2020/09/blockchain-technology.jpg"></a>
+  <a class="carousel-item" href="#five!"><img src="https://espacioerp.com/wp-content/uploads/2024/03/internet-de-las-cosas-industria-4.0.jpg"></a>
+</div>
+
+  <!-- Secciones detalladas -->
+  <section class="section">
+    <img src="https://www.skillnest.com/wp-content/uploads/2025/02/big-data.png" alt="Big Data">
+    <div class="section-content">
+      <h2>Big Data</h2>
+      <p>El análisis de grandes volúmenes de datos es clave para la toma de decisiones estratégicas.</p>
+      <h3>Principales Características</h3>
+      <ul><li>Volumen masivo de información.</li><li>Velocidad en el procesamiento.</li><li>Variedad de fuentes.</li></ul>
+      <h3>Pros de utilizarla</h3>
+      <ul><li>Predicción de tendencias.</li><li>Optimización de procesos.</li><li>Mejor atención al cliente.</li></ul>
+      <h3>Contras de utilizarla</h3>
+      <ul><li>Altos costos de infraestructura y mantenimiento.</li><li>Riesgos de privacidad y seguridad debido a la gran cantidad de información.</li></ul>
+      <h3>Usos Principales</h3>
+      <p>Uso en marketing digital para analizar comportamiento de usuarios.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <img src="https://mediatek-marketing.transforms.svdcdn.com/production/posts/MediaTek-IA-2023.jpg?w=2048&h=1075&q=80&auto=format&fit=crop&dm=1688130337&s=3b56535c28f441a34db9455d64444cb7" alt="IA">
+    <div class="section-content">
+      <h2>Inteligencia Artificial</h2>
+      <p>La IA permite que máquinas aprendan, razonen y actúen como humanos.</p>
+      <h3>Principales Características</h3>
+      <ul><li>Automatización de procesos.</li><li>Aprendizaje autónomo.</li><li>Capacidad predictiva.</li></ul>
+      <h3>Pros de utilizarla</h3>
+      <ul><li>Eficiencia en tareas repetitivas.</li><li>Diagnósticos más rápidos en medicina.</li><li>Asistentes virtuales.</li></ul>
+      <h3>Contras de utilizarla</h3>
+      <ul><li>Desplazamiento laboral.</li><li>Riesgos éticos.</li></ul>
+      <h3>Usos Principales</h3>
+      <p>Chatbots de atención al cliente y sistemas de reconocimiento facial.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <img src="https://static.casadomo.com/media/2024/05/redes-realidad-virtual-aumentada-proyectos-pilotos-5g.png" alt="VR">
+    <div class="section-content">
+      <h2>Realidad Virtual y Aumentada</h2>
+      <p>Fusiona lo digital con lo real para experiencias inmersivas.</p>
+      <h3>Principales Características</h3>
+      <ul><li>Entornos simulados en 3D.</li><li>Interacción en tiempo real.</li><li>Uso de gafas y sensores.</li></ul>
+      <h3>Pros de utilizarla</h3>
+      <ul><li>Aprendizaje práctico.</li><li>Entretenimiento inmersivo.</li></ul>
+      <h3>Contras de utilizarla</h3>
+      <ul><li>Altos costos de equipos.</li><li>Problemas de salud visual.</li></ul>
+      <h3>Usos Principales</h3>
+      <p>Simuladores médicos y videojuegos VR como Oculus Quest.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <img src="https://canvia.com/wp-content/uploads/2023/12/banner-blockchain.jpg" alt="Blockchain">
+    <div class="section-content">
+      <h2>Blockchain</h2>
+      <p>Tecnología de bloques encadenados que garantiza seguridad y transparencia.</p>
+      <h3>Principales Características</h3>
+      <ul><li>Registro descentralizado.</li><li>Inmutabilidad.</li><li>Contratos inteligentes.</li></ul>
+      <h3>Pros de utilizarla</h3>
+      <ul><li>Evita fraudes.</li><li>Transacciones seguras.</li></ul>
+      <h3>Contras de utilizarla</h3>
+      <ul><li>Consumo energético elevado.</li><li>Complejidad técnica.</li></ul>
+      <h3>Usos Principales</h3>
+      <p>Bitcoin, Ethereum y gestión de cadenas de suministro.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <img src="https://cta.org.co/wp-content/uploads/2021/05/ARTICULO-IOT.jpg" alt="IoT">
+    <div class="section-content">
+      <h2>Internet de las Cosas (IoT)</h2>
+      <p>Conecta dispositivos para optimizar procesos y mejorar la vida diaria.</p>
+      <h3>Principales Características</h3>
+      <ul><li>Conexión en tiempo real.</li><li>Automatización de tareas.</li><li>Análisis de datos.</li></ul>
+      <h3>Pros de utilizarla</h3>
+      <ul><li>Hogares inteligentes.</li><li>Eficiencia en transporte y salud.</li></ul>
+      <h3>Contras de utilizarla</h3>
+      <ul><li>Riesgos de ciberseguridad.</li><li>Dependencia de internet.</li></ul>
+      <h3>Usos Principales</h3>
+      <p>Asistentes de voz como Alexa y Google Home.</p>
+    </div>
+  </section>
+
+  <!-- Collage -->
+  <h2 class="collage-title">Tendencias 2025</h2>
+  <div class="collage">
+    <img src="https://www.gsoft.es/wp-content/uploads/2025/05/como-empezar-a-usar-dashboards-para-monitorizar-tu-negocio.jpg" alt="Big Data">
+    <img src="https://www.zabala.es/wp-content/uploads/2023/11/Inteligencia-artificial-y-consultoria-1200x675.jpg" alt="IA">
+    <img src="https://www.obicex.es/sites/obicex/files/styles/blog_desktop/public/images/blog/diferencia-entre-realidad-virtual-y-aumentada.jpg?itok=VVGZsTnQ" alt="VR">
+    <img src="https://cdn.bap-software.net/2020/09/blockchain-technology.jpg" alt="Blockchain">
+    <img src="https://espacioerp.com/wp-content/uploads/2024/03/internet-de-las-cosas-industria-4.0.jpg" alt="IoT">
+    <img src="https://incae.edu/wp-content/uploads/2023/10/big_data_01.jpg" alt="Big Data2">
+    <img src="https://inesdi-cdn.s3.eu-west-3.amazonaws.com/inesdi-prod/2023-09/7-herramientas-big-data-vitales-para-tu-empresa-2023.jpeg" alt="IA2">
+    <img src="https://www.tdk.com/en/tech-mag/sites/default/files/2024-03/Blockchain-Cryptocurrency.jpg" alt="Blockchain">
+  </div>
+
+  
+
+<script>
+  (function(){
+  document.addEventListener('DOMContentLoaded', function() {
+    // 1) updateTextFields si existe
+    try { if (window.M && M.updateTextFields) M.updateTextFields(); } catch(e){ /* ignore */ }
+
+    // 2) Inicializar Floating Action Button si Materialize está presente
+    var fabs = document.querySelectorAll('.fixed-action-btn');
+    if (window.M && M.FloatingActionButton && fabs.length) {
+      M.FloatingActionButton.init(fabs, {
+        direction: 'left',    // 'top', 'left', 'right' según prefieras
+        hoverEnabled: false   // false = abrir con clic (mejor en móviles)
+      });
+    } else if (fabs.length) {
+      // Fallback ligero si Materialize JS no está cargado: toggle manual
+      fabs.forEach(function(fab){
+        var trigger = fab.querySelector('.btn-floating');
+        var list = fab.querySelector('ul');
+        trigger && trigger.addEventListener('click', function(e){
+          fab.classList.toggle('active');
+        });
+        // cerrar al clickar fuera
+        document.addEventListener('click', function(ev){
+          if (!fab.contains(ev.target)) fab.classList.remove('active');
+        });
+      });
+    }
+
+    // 3) Comportamiento del botón de Contacto:
+    //    - Si estamos en la misma página y existe #contactForm -> hacer scroll suave
+    //    - Si no existe -> dejar que el href navegue a Contacto.html#contactForm
+    var contactBtns = document.querySelectorAll('#fab-contact');
+    contactBtns.forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        var target = document.getElementById('contactForm');
+        if (target) {
+          // estamos en la página Contacto: impedir la navegación y hacer smooth scroll
+          e.preventDefault();
+          // cerrar el FAB si está abierto (compatibilidad con Materialize)
+          var parent = btn.closest('.fixed-action-btn');
+          if (parent) parent.classList.remove('active');
+
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          // enfocar primer campo útil
+          var first = target.querySelector('input, textarea, select, button');
+          if (first) {
+            // pequeño timeout para asegurar que el scroll terminó en navegadores lentos
+            setTimeout(function(){ first.focus(); }, 400);
+          }
+        }
+        // si no existe #contactForm, dejamos que el enlace haga la navegación a Contacto.html#contactForm
+      });
+    });
+
+  });
+})();
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    M.Carousel.init(elems, {
+      fullWidth: true,   // hace que se vea tipo slider
+      indicators: true   // puntitos abajo
+    });
+  });
+</script>
+<!-- FLOATING ACTION BUTTON -->
+<div class="fixed-action-btn" style="z-index:2000;">
+  <a class="btn-floating btn-large red" aria-label="Abrir menú">
+    <i class="large material-icons">menu</i>
+  </a>
+  <ul>
+    <!-- Inicio (va a index.html) -->
+    <li>
+      <a href="index.html" class="btn-floating blue" title="Inicio" aria-label="Inicio">
+        <i class="material-icons">home</i>
+      </a>
+    </li>
+
+    <!-- Correo (mailto) -->
+    <li>
+      <a id="fab-email" href="mailto:info@universidad.com" class="btn-floating green" title="Enviar correo" aria-label="Correo">
+        <i class="material-icons">email</i>
+      </a>
+    </li>
+
+    <!-- Contacto: apunta a la página Contacto con fragmento para poder usarlo desde cualquier página -->
+    <li>
+      <a id="fab-contact" href="Contacto.html#contactForm" class="btn-floating yellow darken-1" title="Contacto" aria-label="Contacto">
+        <i class="material-icons">message</i>
+      </a>
+    </li>
+  </ul>
+</div>
+ <!-- FOOTER -->
+  <footer class="page-footer blue darken-4" style="margin-top: 50px;">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center">
+          <h5 class="white-text">Universidad Espíritu Santo</h5>
+          <p class="grey-text text-lighten-4">Carrera: Desarrollo de Software</p>
+          <p class="grey-text text-lighten-4">Guayaquil - Ecuador</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center">
+        © 2025 Universidad Espíritu Santo. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts de Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      M.updateTextFields();
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        nombre: form.nombre.value.trim(),
+        telefono: form.telefono.value.trim(),
+        correo: form.correo.value.trim(),
+        comentario: form.comentario.value.trim()
+      };
+      console.log('Datos de formulario:', data);
+      M.toast({html: 'Gracias — tu mensaje ha sido registrado.', classes:'green'});
+      form.reset();
+      M.updateTextFields();
+    });
+    
+  </script>
+</body>
+</html>

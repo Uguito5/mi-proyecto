@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tecnologías Emergentes</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Fuentes y Materialize -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.7;
+    }
+    .hero {
+      position: relative;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background: url("https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1600&q=80") no-repeat center center;
+      background-size: cover;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    .hero div {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      text-shadow: 0px 0px 15px rgba(0, 200, 255, 0.7);
+    }
+    .hero p {
+      margin-top: 15px;
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .section {
+      padding: 60px 20px;
+    }
+    .card-content h2 {
+      font-size: 2rem;
+      color: #38bdf8;
+    }
+    .card-content h3 {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      color: #fbbf24;
+    }
+    .card img {
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="blue darken-4">
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">Proyecto</a>
+      <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="IA.HTML">Inteligencia Artificial</a></li>
+        <li><a href="machine_learning.html">Machine Learning</a></li>
+        <li><a href="Tecnologias.html">Tecnologías Emergentes</a></li>
+        <li><a href="Tendencias.html">Tendencias</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- NAVBAR MOVIL -->
+  <ul class="sidenav blue darken-4" id="mobile-nav">
+    <li><a class="white-text" href="IA.HTML">Inteligencia Artificial</a></li>
+    <li><a class="white-text" href="machine_learning.html">Machine Learning</a></li>
+    <li><a class="white-text" href="emergentes.html">Tecnologías Emergentes</a></li>
+    <li><a class="white-text" href="Tendencias.html">Tendencias</a></li>
+    <li><a class="white-text" href="Contacto.html">Contacto</a></li>
+  </ul>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>Tecnologías Emergentes</h1>
+      <p>Innovaciones que están transformando el mundo: desde la Realidad Virtual hasta el Internet de las Cosas.</p>
+    </div>
+  </section>
+
+  <!-- SECCIONES -->
+  <div class="container">
+
+    <!-- VR/AR -->
+    <div class="section">
+      <div class="card grey darken-3">
+        <div class="card-image">
+          <img src="https://img.freepik.com/foto-gratis/gente-bailando-fiesta-inmersiva-auriculares-realidad-virtual-colores-neon-brillantes_23-2151419795.jpg?semt=ais_incoming&w=740&q=80" alt="Realidad Virtual">
+        </div>
+        <div class="card-content white-text">
+          <h2>Realidad Virtual y Aumentada (VR/AR)</h2>
+          <p>La VR/AR crea experiencias inmersivas que combinan el mundo físico y digital, aplicadas en entretenimiento, educación y medicina.</p>
+          <h3>Características</h3>
+          <ul>
+            <li>Inmersión total o parcial en entornos digitales.</li>
+            <li>Interacción en tiempo real con objetos virtuales.</li>
+            <li>Uso de dispositivos como gafas VR o móviles AR.</li>
+          </ul>
+          <h3>Ventajas</h3>
+          <ul>
+            <li>Experiencias realistas para aprendizaje y simulaciones.</li>
+            <li>Impulsa la innovación en videojuegos, medicina y turismo.</li>
+          </ul>
+          <h3>Desventajas</h3>
+          <ul>
+            <li>Alto costo de dispositivos especializados.</li>
+            <li>Riesgo de aislamiento social o problemas de visión.</li>
+          </ul>
+          <h3>Ejemplo</h3>
+          <p>Gafas Oculus Quest 2 y aplicaciones AR como Pokémon Go.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blockchain -->
+    <div class="section">
+      <div class="card grey darken-3">
+        <div class="card-image">
+          <img src="https://images.stockcake.com/public/7/2/c/72ce201e-97e3-45af-a795-a57bd49a13cf_large/neon-blockchain-matrix-stockcake.jpg" alt="Blockchain">
+        </div>
+        <div class="card-content white-text">
+          <h2>Blockchain</h2>
+          <p>Es una tecnología que registra transacciones de manera segura y transparente mediante bloques encadenados.</p>
+          <h3>Características</h3>
+          <ul>
+            <li>Registro descentralizado e inmutable.</li>
+            <li>Alta seguridad y transparencia.</li>
+            <li>Uso en contratos inteligentes y criptomonedas.</li>
+          </ul>
+          <h3>Ventajas</h3>
+          <ul>
+            <li>Elimina intermediarios en transacciones.</li>
+            <li>Seguridad contra fraudes.</li>
+          </ul>
+          <h3>Desventajas</h3>
+          <ul>
+            <li>Elevado consumo energético.</li>
+            <li>Complejidad de implementación.</li>
+          </ul>
+          <h3>Ejemplo</h3>
+          <p>Bitcoin, Ethereum y aplicaciones DeFi (finanzas descentralizadas).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- IoT -->
+    <div class="section">
+      <div class="card grey darken-3">
+        <div class="card-image">
+          <img src="https://rad-digital.com/wp-content/uploads/2024/05/iot.jpg" alt="Internet de las Cosas">
+        </div>
+        <div class="card-content white-text">
+          <h2>Internet de las Cosas (IoT)</h2>
+          <p>Conecta dispositivos cotidianos a internet, permitiendo automatización y transmisión de datos.</p>
+          <h3>Características</h3>
+          <ul>
+            <li>Conectividad entre objetos físicos y digitales.</li>
+            <li>Automatización de procesos.</li>
+            <li>Recolección y análisis de datos en tiempo real.</li>
+          </ul>
+          <h3>Ventajas</h3>
+          <ul>
+            <li>Mayor eficiencia en hogares, industrias y ciudades.</li>
+            <li>Facilita la vida cotidiana (domótica, salud, transporte).</li>
+          </ul>
+          <h3>Desventajas</h3>
+          <ul>
+            <li>Problemas de seguridad y privacidad de datos.</li>
+            <li>Dependencia de la conexión a internet.</li>
+          </ul>
+          <h3>Ejemplo</h3>
+          <p>Asistentes de voz (Alexa, Google Home) y dispositivos inteligentes para el hogar.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script>
+  (function(){
+  document.addEventListener('DOMContentLoaded', function() {
+    // 1) updateTextFields si existe
+    try { if (window.M && M.updateTextFields) M.updateTextFields(); } catch(e){ /* ignore */ }
+
+    // 2) Inicializar Floating Action Button si Materialize está presente
+    var fabs = document.querySelectorAll('.fixed-action-btn');
+    if (window.M && M.FloatingActionButton && fabs.length) {
+      M.FloatingActionButton.init(fabs, {
+        direction: 'left',    // 'top', 'left', 'right' según prefieras
+        hoverEnabled: false   // false = abrir con clic (mejor en móviles)
+      });
+    } else if (fabs.length) {
+      // Fallback ligero si Materialize JS no está cargado: toggle manual
+      fabs.forEach(function(fab){
+        var trigger = fab.querySelector('.btn-floating');
+        var list = fab.querySelector('ul');
+        trigger && trigger.addEventListener('click', function(e){
+          fab.classList.toggle('active');
+        });
+        // cerrar al clickar fuera
+        document.addEventListener('click', function(ev){
+          if (!fab.contains(ev.target)) fab.classList.remove('active');
+        });
+      });
+    }
+
+    // 3) Comportamiento del botón de Contacto:
+    //    - Si estamos en la misma página y existe #contactForm -> hacer scroll suave
+    //    - Si no existe -> dejar que el href navegue a Contacto.html#contactForm
+    var contactBtns = document.querySelectorAll('#fab-contact');
+    contactBtns.forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        var target = document.getElementById('contactForm');
+        if (target) {
+          // estamos en la página Contacto: impedir la navegación y hacer smooth scroll
+          e.preventDefault();
+          // cerrar el FAB si está abierto (compatibilidad con Materialize)
+          var parent = btn.closest('.fixed-action-btn');
+          if (parent) parent.classList.remove('active');
+
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          // enfocar primer campo útil
+          var first = target.querySelector('input, textarea, select, button');
+          if (first) {
+            // pequeño timeout para asegurar que el scroll terminó en navegadores lentos
+            setTimeout(function(){ first.focus(); }, 400);
+          }
+        }
+        // si no existe #contactForm, dejamos que el enlace haga la navegación a Contacto.html#contactForm
+      });
+    });
+
+  });
+})();
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    M.Carousel.init(elems, {
+      fullWidth: true,   // hace que se vea tipo slider
+      indicators: true   // puntitos abajo
+    });
+  });
+</script>
+<!-- FLOATING ACTION BUTTON -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a href="index.html" class="btn-floating blue" title="Inicio"><i class="material-icons">home</i></a></li>
+      <li><a href="mailto:info@universidad.com" class="btn-floating green" title="Correo"><i class="material-icons">email</i></a></li>
+      <li><a href="#contactForm" class="btn-floating yellow darken-1" title="Contacto"><i class="material-icons">message</i></a></li>
+    </ul>
+  </div>
+  <!-- FLOATING ACTION BUTTON -->
+<div class="fixed-action-btn" style="z-index:2000;">
+  <a class="btn-floating btn-large red" aria-label="Abrir menú">
+    <i class="large material-icons">menu</i>
+  </a>
+  <ul>
+    <!-- Inicio (va a index.html) -->
+    <li>
+      <a href="index.html" class="btn-floating blue" title="Inicio" aria-label="Inicio">
+        <i class="material-icons">home</i>
+      </a>
+    </li>
+
+    <!-- Correo (mailto) -->
+    <li>
+      <a id="fab-email" href="mailto:info@universidad.com" class="btn-floating green" title="Enviar correo" aria-label="Correo">
+        <i class="material-icons">email</i>
+      </a>
+    </li>
+
+    <!-- Contacto: apunta a la página Contacto con fragmento para poder usarlo desde cualquier página -->
+    <li>
+      <a id="fab-contact" href="Contacto.html#contactForm" class="btn-floating yellow darken-1" title="Contacto" aria-label="Contacto">
+        <i class="material-icons">message</i>
+      </a>
+    </li>
+  </ul>
+</div>
+  <!-- FOOTER -->
+  <footer class="page-footer blue darken-4" style="margin-top: 50px;">
+    <div class="container center">
+      <h5 class="white-text">Universidad Espíritu Santo</h5>
+      <p class="grey-text text-lighten-4">Carrera: Desarrollo de Software</p>
+      <p class="grey-text text-lighten-4">Guayaquil - Ecuador</p>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center">
+        © 2025 Universidad Espíritu Santo. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts de Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const elems = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(elems);
+    });
+    (function(){
+  document.addEventListener('DOMContentLoaded', function() {
+    // 1) updateTextFields si existe
+    try { if (window.M && M.updateTextFields) M.updateTextFields(); } catch(e){ /* ignore */ }
+
+    // 2) Inicializar Floating Action Button si Materialize está presente
+    var fabs = document.querySelectorAll('.fixed-action-btn');
+    if (window.M && M.FloatingActionButton && fabs.length) {
+      M.FloatingActionButton.init(fabs, {
+        direction: 'left',    // 'top', 'left', 'right' según prefieras
+        hoverEnabled: false   // false = abrir con clic (mejor en móviles)
+      });
+    } else if (fabs.length) {
+      // Fallback ligero si Materialize JS no está cargado: toggle manual
+      fabs.forEach(function(fab){
+        var trigger = fab.querySelector('.btn-floating');
+        var list = fab.querySelector('ul');
+        trigger && trigger.addEventListener('click', function(e){
+          fab.classList.toggle('active');
+        });
+        // cerrar al clickar fuera
+        document.addEventListener('click', function(ev){
+          if (!fab.contains(ev.target)) fab.classList.remove('active');
+        });
+      });
+    }
+
+    // 3) Comportamiento del botón de Contacto:
+    //    - Si estamos en la misma página y existe #contactForm -> hacer scroll suave
+    //    - Si no existe -> dejar que el href navegue a Contacto.html#contactForm
+    var contactBtns = document.querySelectorAll('#fab-contact');
+    contactBtns.forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        var target = document.getElementById('contactForm');
+        if (target) {
+          // estamos en la página Contacto: impedir la navegación y hacer smooth scroll
+          e.preventDefault();
+          // cerrar el FAB si está abierto (compatibilidad con Materialize)
+          var parent = btn.closest('.fixed-action-btn');
+          if (parent) parent.classList.remove('active');
+
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          // enfocar primer campo útil
+          var first = target.querySelector('input, textarea, select, button');
+          if (first) {
+            // pequeño timeout para asegurar que el scroll terminó en navegadores lentos
+            setTimeout(function(){ first.focus(); }, 400);
+          }
+        }
+        // si no existe #contactForm, dejamos que el enlace haga la navegación a Contacto.html#contactForm
+      });
+    });
+
+  });
+})();
+  </script>
+</body>
+</html>

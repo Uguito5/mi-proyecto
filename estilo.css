@@ -1,0 +1,133 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      line-height: 1.7;
+    }
+
+    .hero {
+      position: relative;
+      height: 90vh; /*  Bajé un poco la altura para que no se vea tan estirado */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      z-index: 1;
+
+      /*  Fondo principal del hero */
+      background: url("https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1600&q=80") no-repeat center center;
+      background-size: contain; /*  Uso contain para que salga la imagen completa */
+      background-color: #000; /*  Fondo negro si sobra espacio */
+    }
+
+    .hero::before {
+      /*  Este overlay es para oscurecer la imagen y que el texto se lea mejor */
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+
+    .hero div {
+      position: relative;
+      z-index: 1; /*  Para que el texto se muestre encima del overlay */
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      /*  Efecto neón suave */
+      text-shadow: 0px 0px 15px rgba(0, 200, 255, 0.7);
+    }
+
+    .hero p {
+      margin-top: 15px;
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Secciones de subtemas */
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 15px;
+      /*  Le puse sombra para resaltar las imágenes */
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    }
+
+    .section-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .section-content h2 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #38bdf8; /*  Títulos azules para mantener coherencia con el tema */
+    }
+
+    .section-content h3 {
+      margin-top: 20px;
+      font-size: 1.4rem;
+      color: #fbbf24; /*  Subtítulos en amarillo para contraste */
+    }
+
+    .section-content ul {
+      margin-left: 20px;
+    }
+
+    .section-content li {
+      margin: 8px 0;
+    }
+
+    /*  Compañero quise alternar el orden de imagen/texto en las secciones  osea lo hice como pense que se veria bien */
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    @media (max-width: 768px) {
+      /*  En móvil todo en columna */
+      .section {
+        flex-direction: column !important;
+      }
+    }
+    header { position: fixed; top: 0; width: 100%; background-color:#333; padding: 10px 20px;z-index: 2; color: white;}
+nav ul { list-style: none; margin: 0; padding: 0; text-align: right;}
+nav ul li { display: inline; margin-right: 10px; }
+nav a { text-decoration: none; color: #ffffff; }
+a:hover {
+			text-decoration: none;
+		}
+        #header nav a {
+				color: #f29c0f;
+                text-align: center;
+				text-decoration: none;
+				font-weight: bold;
+				outline: 0;
+			}
+
+				#header nav a:hover {
+					color: white;
+				}

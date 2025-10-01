@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Fuentes y Materialize -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Proyecto Final</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href=estilo.css rel="stylesheet">
+  <style>
+.hero {
+      position: relative;
+      height: 90vh; /*  Bajé un poco la altura para que no se vea tan estirado */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+
+      /*  Fondo principal del hero */
+      background: url("https://adpmx.com/storage/2023/08/ficha_1920x1080-copiaiStock-1274417553-1-1024x576.jpg") no-repeat center center;
+      background-size: contain; /*  Uso contain para que salga la imagen completa */
+      background-color: #000; /*  Fondo negro si sobra espacio */
+    }
+
+
+main { padding: 20px; }
+h2{text-align: center;}
+table { border-collapse: collapse; width: 100%; max-width: 800px;margin-left: 25%; }
+td, th { border: 1px solid #999; padding: 8px; vertical-align: center; max-height: 200px;}
+.imagen-peq { width: 150px; max-width: 300px; height: auto; }
+</style>
+  
+</head>
+<body>
+<!-- NAVBAR -->
+  <nav class="blue darken-4">
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">Proyecto</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="IA.HTML">Inteligencia Artificial</a></li>
+        <li><a href="machine_learning.html">Machine Learning</a></li>
+        <li><a href="Tecnologias.html">Tecnologías Emergentes</a></li>
+        <li><a href="Tendencias.html">Tendencias</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>BIENVENIDOS A NUESTRO PROYECTO</h1>
+      <p>La nueva era está aquí</p>
+      <p>Te presentamos las nuevas caras que la rigen</p>
+    </div>
+  </section>
+
+  <section id="home">
+<h2>INTEGRANTES</h2>
+<table>
+  <tr>
+<th><p><strong>Nombre:</strong> Génesis Solis</p>
+<p><strong>Carrera:</strong> Desarrollo de Software</p>
+<p><em>Pasatiempo:</em> Viajar</p></th>
+<th><img src="img/Genesis.png" alt="Imagen de ejemplo" class="imagen-peq"></th>
+</tr>
+<tr>
+<th>
+<img src="img/Hugo.png" alt="Imagen de ejemplo" class="imagen-peq">
+</th>
+<th><p><strong>Nombre:</strong> Hugo Romo</p>
+<p><strong>Carrera:</strong> Desarrollo Web</p>
+<p><em>Pasatiempo:</em> Genesis </p></th>
+</tr>
+<tr>
+<th><p><strong>Nombre:</strong> Karla Landazuri</p>
+<p><strong>Carrera:</strong> Desarrollo de Software</p>
+<p><em>Pasatiempo:</em> Ver series</p></th>
+<th><img src="img/karla Landazuri.jpg" alt="Imagen de ejemplo" class="imagen-peq"></th>
+</tr>
+<tr>
+<th>
+<img src="img/kenny.jpg" alt="Imagen de ejemplo" class="imagen-peq">
+</th>
+<th><p><strong>Nombre:</strong> Kenny Larrea</p>
+<p><strong>Carrera:</strong> Desarrollo de Software</p>
+<p><em>Pasatiempo:</em> caminar</p></th>
+</tr>
+<tr>
+<th><p><strong>Nombre:</strong> Alberto Mora</p>
+<p><strong>Carrera:</strong> Desarrollo de Software</p>
+<p><em>Pasatiempo:</em> Videojuegos</p></th>
+<th><img src="img/alberto.png" alt="Imagen de ejemplo" class="imagen-peq"></th>
+</tr>
+<tr>
+<th>
+<img src="img/luis.jpg" alt="Imagen de ejemplo" class="imagen-peq">
+</th>
+<th><p><strong>Nombre:</strong> Luis Cajamarca</p>
+<p><strong>Carrera:</strong> Desarrollo de Software</p>
+<p><em>Pasatiempo:</em> Leer</p></th>
+</tr>
+<tr>
+<th><p><strong>Nombre:</strong> Ferney Ruales</p>
+<p><strong>Carrera:</strong> Desarrollo de Software</p>
+<p><em>Pasatiempo:</em> Comer</p></th>
+<th>
+<img src="img/ferney.jpg" alt="Imagen de ejemplo" class="imagen-peq">
+</th>
+
+</tr>
+</table>
+<br>
+</section>
+
+</body>
+<script>
+  (function(){
+  document.addEventListener('DOMContentLoaded', function() {
+    // 1) updateTextFields si existe
+    try { if (window.M && M.updateTextFields) M.updateTextFields(); } catch(e){ /* ignore */ }
+
+    // 2) Inicializar Floating Action Button si Materialize está presente
+    var fabs = document.querySelectorAll('.fixed-action-btn');
+    if (window.M && M.FloatingActionButton && fabs.length) {
+      M.FloatingActionButton.init(fabs, {
+        direction: 'left',    // 'top', 'left', 'right' según prefieras
+        hoverEnabled: false   // false = abrir con clic (mejor en móviles)
+      });
+    } else if (fabs.length) {
+      // Fallback ligero si Materialize JS no está cargado: toggle manual
+      fabs.forEach(function(fab){
+        var trigger = fab.querySelector('.btn-floating');
+        var list = fab.querySelector('ul');
+        trigger && trigger.addEventListener('click', function(e){
+          fab.classList.toggle('active');
+        });
+        // cerrar al clickar fuera
+        document.addEventListener('click', function(ev){
+          if (!fab.contains(ev.target)) fab.classList.remove('active');
+        });
+      });
+    }
+
+    // 3) Comportamiento del botón de Contacto:
+    //    - Si estamos en la misma página y existe #contactForm -> hacer scroll suave
+    //    - Si no existe -> dejar que el href navegue a Contacto.html#contactForm
+    var contactBtns = document.querySelectorAll('#fab-contact');
+    contactBtns.forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        var target = document.getElementById('contactForm');
+        if (target) {
+          // estamos en la página Contacto: impedir la navegación y hacer smooth scroll
+          e.preventDefault();
+          // cerrar el FAB si está abierto (compatibilidad con Materialize)
+          var parent = btn.closest('.fixed-action-btn');
+          if (parent) parent.classList.remove('active');
+
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          // enfocar primer campo útil
+          var first = target.querySelector('input, textarea, select, button');
+          if (first) {
+            // pequeño timeout para asegurar que el scroll terminó en navegadores lentos
+            setTimeout(function(){ first.focus(); }, 400);
+          }
+        }
+        // si no existe #contactForm, dejamos que el enlace haga la navegación a Contacto.html#contactForm
+      });
+    });
+
+  });
+})();
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    M.Carousel.init(elems, {
+      fullWidth: true,   // hace que se vea tipo slider
+      indicators: true   // puntitos abajo
+    });
+  });
+</script>
+<!-- FLOATING ACTION BUTTON -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a href="index.html" class="btn-floating blue" title="Inicio"><i class="material-icons">home</i></a></li>
+      <li><a href="mailto:info@universidad.com" class="btn-floating green" title="Correo"><i class="material-icons">email</i></a></li>
+      <li><a href="#contactForm" class="btn-floating yellow darken-1" title="Contacto"><i class="material-icons">message</i></a></li>
+    </ul>
+  </div>
+  <!-- FLOATING ACTION BUTTON -->
+<div class="fixed-action-btn" style="z-index:2000;">
+  <a class="btn-floating btn-large red" aria-label="Abrir menú">
+    <i class="large material-icons">menu</i>
+  </a>
+  <ul>
+    <!-- Inicio (va a index.html) -->
+    <li>
+      <a href="index.html" class="btn-floating blue" title="Inicio" aria-label="Inicio">
+        <i class="material-icons">home</i>
+      </a>
+    </li>
+
+    <!-- Correo (mailto) -->
+    <li>
+      <a id="fab-email" href="mailto:info@universidad.com" class="btn-floating green" title="Enviar correo" aria-label="Correo">
+        <i class="material-icons">email</i>
+      </a>
+    </li>
+
+    <!-- Contacto: apunta a la página Contacto con fragmento para poder usarlo desde cualquier página -->
+    <li>
+      <a id="fab-contact" href="Contacto.html#contactForm" class="btn-floating yellow darken-1" title="Contacto" aria-label="Contacto">
+        <i class="material-icons">message</i>
+      </a>
+    </li>
+  </ul>
+</div>
+  <!-- FOOTER -->
+  <footer class="page-footer blue darken-4" style="margin-top: 50px;">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center">
+          <h5 class="white-text">Universidad Espíritu Santo</h5>
+          <p class="grey-text text-lighten-4">Carrera: Desarrollo de Software</p>
+          <p class="grey-text text-lighten-4">Guayaquil - Ecuador</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center">
+        © 2025 Universidad Espíritu Santo. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts de Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      M.updateTextFields();
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        nombre: form.nombre.value.trim(),
+        telefono: form.telefono.value.trim(),
+        correo: form.correo.value.trim(),
+        comentario: form.comentario.value.trim()
+      };
+      console.log('Datos de formulario:', data);
+      M.toast({html: 'Gracias — tu mensaje ha sido registrado.', classes:'green'});
+      form.reset();
+      M.updateTextFields();
+    });
+    (function(){
+  document.addEventListener('DOMContentLoaded', function() {
+    // 1) updateTextFields si existe
+    try { if (window.M && M.updateTextFields) M.updateTextFields(); } catch(e){ /* ignore */ }
+
+    // 2) Inicializar Floating Action Button si Materialize está presente
+    var fabs = document.querySelectorAll('.fixed-action-btn');
+    if (window.M && M.FloatingActionButton && fabs.length) {
+      M.FloatingActionButton.init(fabs, {
+        direction: 'left',    // 'top', 'left', 'right' según prefieras
+        hoverEnabled: false   // false = abrir con clic (mejor en móviles)
+      });
+    } else if (fabs.length) {
+      // Fallback ligero si Materialize JS no está cargado: toggle manual
+      fabs.forEach(function(fab){
+        var trigger = fab.querySelector('.btn-floating');
+        var list = fab.querySelector('ul');
+        trigger && trigger.addEventListener('click', function(e){
+          fab.classList.toggle('active');
+        });
+        // cerrar al clickar fuera
+        document.addEventListener('click', function(ev){
+          if (!fab.contains(ev.target)) fab.classList.remove('active');
+        });
+      });
+    }
+
+    // 3) Comportamiento del botón de Contacto:
+    //    - Si estamos en la misma página y existe #contactForm -> hacer scroll suave
+    //    - Si no existe -> dejar que el href navegue a Contacto.html#contactForm
+    var contactBtns = document.querySelectorAll('#fab-contact');
+    contactBtns.forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        var target = document.getElementById('contactForm');
+        if (target) {
+          // estamos en la página Contacto: impedir la navegación y hacer smooth scroll
+          e.preventDefault();
+          // cerrar el FAB si está abierto (compatibilidad con Materialize)
+          var parent = btn.closest('.fixed-action-btn');
+          if (parent) parent.classList.remove('active');
+
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          // enfocar primer campo útil
+          var first = target.querySelector('input, textarea, select, button');
+          if (first) {
+            // pequeño timeout para asegurar que el scroll terminó en navegadores lentos
+            setTimeout(function(){ first.focus(); }, 400);
+          }
+        }
+        // si no existe #contactForm, dejamos que el enlace haga la navegación a Contacto.html#contactForm
+      });
+    });
+
+  });
+})();
+  </script>
+</body>
+</html>

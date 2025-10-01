@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Fuentes y Materialize -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+    }
+    .hero {
+      position: relative;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background: url("img/contact.jpg") no-repeat center center;
+      background-size: cover;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    .hero div {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      text-shadow: 0px 0px 15px rgba(0, 200, 255, 0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="blue darken-4">
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">Proyecto</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="IA.HTML">Inteligencia Artificial</a></li>
+        <li><a href="machine_learning.html">Machine Learning</a></li>
+        <li><a href="Tecnologias.html">Tecnologías Emergentes</a></li>
+        <li><a href="Tendencias.html">Tendencias</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>Formulario de Contacto</h1>
+      <p>Déjanos tus datos y un comentario. Te responderemos lo antes posible.</p>
+    </div>
+  </section>
+
+  <!-- FORMULARIO -->
+  <div class="container" style="margin-top:50px;">
+    <div class="card-panel grey darken-3">
+      <form id="contactForm" action="#" method="post">
+        <div class="input-field">
+          <input id="nombre" type="text" name="nombre" required>
+          <label for="nombre">Nombres</label>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <input id="telefono" type="text" name="telefono" pattern="[0-9+\- ]{7,20}" required>
+            <label for="telefono">Teléfono</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="correo" type="email" name="correo" required>
+            <label for="correo">Correo</label>
+          </div>
+        </div>
+        <div class="input-field">
+          <textarea id="comentario" class="materialize-textarea" name="comentario" required></textarea>
+          <label for="comentario">Comentario</label>
+        </div>
+        <div class="right-align">
+          <button type="reset" class="btn grey lighten-1 black-text">Limpiar</button>
+          <button type="submit" class="btn blue">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FLOATING ACTION BUTTON -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a href="index.html" class="btn-floating blue" title="Inicio"><i class="material-icons">home</i></a></li>
+      <li><a href="mailto:info@universidad.com" class="btn-floating green" title="Correo"><i class="material-icons">email</i></a></li>
+      <li><a href="#contactForm" class="btn-floating yellow darken-1" title="Contacto"><i class="material-icons">message</i></a></li>
+    </ul>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="page-footer blue darken-4" style="margin-top: 50px;">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center">
+          <h5 class="white-text">Universidad Espíritu Santo</h5>
+          <p class="grey-text text-lighten-4">Carrera: Desarrollo de Software</p>
+          <p class="grey-text text-lighten-4">Guayaquil - Ecuador</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center">
+        © 2025 Universidad Espíritu Santo. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts de Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      M.updateTextFields();
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        nombre: form.nombre.value.trim(),
+        telefono: form.telefono.value.trim(),
+        correo: form.correo.value.trim(),
+        comentario: form.comentario.value.trim()
+      };
+      console.log('Datos de formulario:', data);
+      M.toast({html: 'Gracias — tu mensaje ha sido registrado.', classes:'green'});
+      form.reset();
+      M.updateTextFields();
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+  M.updateTextFields();
+
+  // Inicializar el FAB
+  const elems = document.querySelectorAll('.fixed-action-btn');
+  M.FloatingActionButton.init(elems, {
+    direction: 'left',
+    hoverEnabled: false
+  });
+
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const form = e.target;
+    const data = {
+      nombre: form.nombre.value.trim(),
+      telefono: form.telefono.value.trim(),
+      correo: form.correo.value.trim(),
+      comentario: form.comentario.value.trim()
+    };
+    console.log('Datos de formulario:', data);
+    M.toast({html: 'Gracias — tu mensaje ha sido registrado.', classes:'green'});
+    form.reset();
+    M.updateTextFields();
+  });
+});
+  </script>
+  
+</body>
+</html>

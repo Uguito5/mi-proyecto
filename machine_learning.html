@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- agregamos materialize-->
+  <!-- Fuentes y Materialize -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Qué es machine learning?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&dis
+  play=swap" rel="stylesheet">
+  <link href=estilo.css rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      line-height: 1.7;
+    }
+
+    .hero {
+      position: relative;
+      height: 90vh; /*  Bajé un poco la altura para que no se vea tan estirado */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+
+      /*  Fondo principal del hero */
+      background: url("img/mchn.jpg") no-repeat center center;
+      background-size: contain; /*  Uso contain para que salga la imagen completa */
+      background-color: #000; /*  Fondo negro si sobra espacio */
+    }
+
+    .hero::before {
+      /*  Este overlay es para oscurecer la imagen y que el texto se lea mejor */
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+
+    .hero div {
+      position: relative;
+      z-index: 1; /*  Para que el texto se muestre encima del overlay */
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      /*  Efecto neón suave */
+      text-shadow: 0px 0px 15px rgba(0, 200, 255, 0.7);
+    }
+
+    .hero p {
+      margin-top: 15px;
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Secciones de subtemas */
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 15px;
+      /*  Le puse sombra para resaltar las imágenes */
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    }
+
+    .section-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .section-content h2 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #38bdf8; /*  Títulos azules para mantener coherencia con el tema */
+    }
+
+    .section-content h3 {
+      margin-top: 20px;
+      font-size: 1.4rem;
+      color: #fbbf24; /*  Subtítulos en amarillo para contraste */
+    }
+
+    .section-content ul {
+      margin-left: 20px;
+    }
+
+    .section-content li {
+      margin: 8px 0;
+    }
+
+    /*  Compañero quise alternar el orden de imagen/texto en las secciones  osea lo hice como pense que se veria bien */
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    @media (max-width: 768px) {
+      /*  En móvil todo en columna */
+      .section {
+        flex-direction: column !important;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- NAVBAR -->
+  <nav class="blue darken-4">
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">Proyecto</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="IA.HTML">Inteligencia Artificial</a></li>
+        <li><a href="machine_learning.html">Machine Learning</a></li>
+        <li><a href="Tecnologias.html">Tecnologías Emergentes</a></li>
+        <li><a href="Tendencias.html">Tendencias</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>¿Qué es machine learning?</h1>
+      <p></p>
+    </div>
+  </section>
+
+  <!-- SUBTEMA 1 -->
+  <section class="section">
+    <img src="https://img.freepik.com/foto-gratis/gente-bailando-fiesta-inmersiva-auriculares-realidad-virtual-colores-neon-brillantes_23-2151419795.jpg?semt=ais_incoming&w=740&q=80" alt="Realidad Virtual">
+    <div class="section-content">
+      <h2>El machine learning</h2>
+      <p>Es una rama de la inteligencia artificial (IA) centrada en entrenar a computadoras y máquinas para imitar el modo en que aprenden los humanos, realizar tareas de forma autónoma y mejorar su rendimiento y precisión a través de la experiencia y la exposición a más datos.</p>
+      <h3>Diferencias entre machine learning, deep learning & neural networks</h3>
+      <ul>
+        <li>las redes neuronales son en realidad un subcampo del machine learning y el deep learning es un subcampo de las redes neuronales.</li>
+        <li>La forma en que difieren el deep learning y el machine learning es en la forma en que aprende cada algoritmo. </li>
+        <li>Las neural networks, o neural networks artificiales (ANN), se componen de capas de nodos, que contienen una capa de entrada, una o más capas ocultas y una capa de salida.</li>
+      </ul>
+      <h3>Métodos de machine learning</h3>
+      <ul>
+        <li>Aprendizaje supervisado</li>
+        <li>Aprendizaje no supervisado</li>
+        <li>Aprendizaje semisupervisado</li>
+        <li>Aprendizaje por refuerzo</li>
+      </ul>
+      <h3>Algoritmos más comunes de machine learning</h3>
+      <ul>
+        <li>Redes neuronales</li>
+        <li>Regresión lineal</li>
+        <li>Regresión logística</li>
+        <li>Agrupación en clústeres</li>
+        <li>Árboles de decisión</li>
+        <li>Bosques aleatorios</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SUBTEMA 2 -->
+  <section class="section">
+    <img src="https://images.stockcake.com/public/7/2/c/72ce201e-97e3-45af-a795-a57bd49a13cf_large/neon-blockchain-matrix-stockcake.jpg" alt="Blockchain">
+    <div class="section-content">
+      <h2>Ventajas y desventajas de los algoritmos de machine learning</h2>
+      <p>Dependiendo de su presupuesto, necesidad de velocidad y precisión requerida, cada tipo de algoritmo (supervisado, no supervisado, semisupervisado o de refuerzo) tiene sus propias ventajas e inconvenientes. </p>
+      <h3>Ventajas</h3>
+      <ul>
+        <li>Una ventaja primordial de los decision trees es que son más fáciles de validar y auditar que una neural network. La mala noticia es que pueden ser más inestables que otros predictores de decisiones.</li>
+        <li>Otra ventaja seria el machine learning para identificar patrones y tendencias en volúmenes masivos de datos que los humanos podrían no detectar en absoluto.</li>
+      </ul>
+      <h3>Desventajas</h3>
+      <ul>
+        <li>En el lado negativo, el machine learning requiere grandes conjuntos de datos de entrenamiento que sean precisos e imparciales. </li>
+        <li>Otra desventaja es que el machine learning también puede ser propenso a errores, dependiendo de los datos de entrada.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SUBTEMA 3 -->
+  <section class="section">
+    <!--  Imagen más clara para IoT (le da variedad al diseño) -->
+    <img src="https://rad-digital.com/wp-content/uploads/2024/05/iot.jpg" alt="Internet de las Cosas">
+    <div class="section-content">
+      <h2>Casos de uso de machine learning en el mundo real</h2>
+        <li>Reconocimiento de voz</li>
+        <li>Atención al cliente</li>
+        <li>Visión artificial</li>
+        <li>Motores de recomendación</li>
+        <li>Automatización robótica de procesos (RPA)</li>
+      </ul>
+      <h3>Principales desafíos</h3>
+      <ul>
+        <li>Singularidad tecnológica</li>
+        <li>Impacto de la IA en los empleos</li>
+        <li>Privacidad</li>
+        <li>Prejuicios y discriminación</li>
+        <li>Responsabilidad</li>
+      </ul>
+      <h3>Cómo elegir la plataforma de IA adecuada para machine learning</h3>
+      <ul>
+        <li>Seleccionar una plataforma puede ser un proceso difícil, ya que un sistema equivocado puede disparar los costos o limitar el uso de otras herramientas o tecnologías valiosas. Al revisar múltiples proveedores para seleccionar una plataforma de IA, a menudo hay una tendencia a pensar que más características equivalen a un mejor sistema. Puede que sí, pero los revisores deberían empezar por pensar qué hará la plataforma de IA por su organización. </li>
+      </ul>
+    </div>
+  </section>
+
+</body>
+<script>
+  (function(){
+  document.addEventListener('DOMContentLoaded', function() {
+    // 1) updateTextFields si existe
+    try { if (window.M && M.updateTextFields) M.updateTextFields(); } catch(e){ /* ignore */ }
+
+    // 2) Inicializar Floating Action Button si Materialize está presente
+    var fabs = document.querySelectorAll('.fixed-action-btn');
+    if (window.M && M.FloatingActionButton && fabs.length) {
+      M.FloatingActionButton.init(fabs, {
+        direction: 'left',    // 'top', 'left', 'right' según prefieras
+        hoverEnabled: false   // false = abrir con clic (mejor en móviles)
+      });
+    } else if (fabs.length) {
+      // Fallback ligero si Materialize JS no está cargado: toggle manual
+      fabs.forEach(function(fab){
+        var trigger = fab.querySelector('.btn-floating');
+        var list = fab.querySelector('ul');
+        trigger && trigger.addEventListener('click', function(e){
+          fab.classList.toggle('active');
+        });
+        // cerrar al clickar fuera
+        document.addEventListener('click', function(ev){
+          if (!fab.contains(ev.target)) fab.classList.remove('active');
+        });
+      });
+    }
+
+    // 3) Comportamiento del botón de Contacto:
+    //    - Si estamos en la misma página y existe #contactForm -> hacer scroll suave
+    //    - Si no existe -> dejar que el href navegue a Contacto.html#contactForm
+    var contactBtns = document.querySelectorAll('#fab-contact');
+    contactBtns.forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        var target = document.getElementById('contactForm');
+        if (target) {
+          // estamos en la página Contacto: impedir la navegación y hacer smooth scroll
+          e.preventDefault();
+          // cerrar el FAB si está abierto (compatibilidad con Materialize)
+          var parent = btn.closest('.fixed-action-btn');
+          if (parent) parent.classList.remove('active');
+
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          // enfocar primer campo útil
+          var first = target.querySelector('input, textarea, select, button');
+          if (first) {
+            // pequeño timeout para asegurar que el scroll terminó en navegadores lentos
+            setTimeout(function(){ first.focus(); }, 400);
+          }
+        }
+        // si no existe #contactForm, dejamos que el enlace haga la navegación a Contacto.html#contactForm
+      });
+    });
+
+  });
+})();
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    M.Carousel.init(elems, {
+      fullWidth: true,   // hace que se vea tipo slider
+      indicators: true   // puntitos abajo
+    });
+  });
+</script>
+<!-- FLOATING ACTION BUTTON -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a href="index.html" class="btn-floating blue" title="Inicio"><i class="material-icons">home</i></a></li>
+      <li><a href="mailto:info@universidad.com" class="btn-floating green" title="Correo"><i class="material-icons">email</i></a></li>
+      <li><a href="#contactForm" class="btn-floating yellow darken-1" title="Contacto"><i class="material-icons">message</i></a></li>
+    </ul>
+  </div>
+  <!-- FLOATING ACTION BUTTON -->
+<div class="fixed-action-btn" style="z-index:2000;">
+  <a class="btn-floating btn-large red" aria-label="Abrir menú">
+    <i class="large material-icons">menu</i>
+  </a>
+  <ul>
+    <!-- Inicio (va a index.html) -->
+    <li>
+      <a href="index.html" class="btn-floating blue" title="Inicio" aria-label="Inicio">
+        <i class="material-icons">home</i>
+      </a>
+    </li>
+
+    <!-- Correo (mailto) -->
+    <li>
+      <a id="fab-email" href="mailto:info@universidad.com" class="btn-floating green" title="Enviar correo" aria-label="Correo">
+        <i class="material-icons">email</i>
+      </a>
+    </li>
+
+    <!-- Contacto: apunta a la página Contacto con fragmento para poder usarlo desde cualquier página -->
+    <li>
+      <a id="fab-contact" href="Contacto.html#contactForm" class="btn-floating yellow darken-1" title="Contacto" aria-label="Contacto">
+        <i class="material-icons">message</i>
+      </a>
+    </li>
+  </ul>
+</div>
+ <!-- FOOTER -->
+  <footer class="page-footer blue darken-4" style="margin-top: 50px;">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center">
+          <h5 class="white-text">Universidad Espíritu Santo</h5>
+          <p class="grey-text text-lighten-4">Carrera: Desarrollo de Software</p>
+          <p class="grey-text text-lighten-4">Guayaquil - Ecuador</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center">
+        © 2025 Universidad Espíritu Santo. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts de Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      M.updateTextFields();
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        nombre: form.nombre.value.trim(),
+        telefono: form.telefono.value.trim(),
+        correo: form.correo.value.trim(),
+        comentario: form.comentario.value.trim()
+      };
+      console.log('Datos de formulario:', data);
+      M.toast({html: 'Gracias — tu mensaje ha sido registrado.', classes:'green'});
+      form.reset();
+      M.updateTextFields();
+    });
+    (function(){
+  document.addEventListener('DOMContentLoaded', function() {
+    // 1) updateTextFields si existe
+    try { if (window.M && M.updateTextFields) M.updateTextFields(); } catch(e){ /* ignore */ }
+
+    // 2) Inicializar Floating Action Button si Materialize está presente
+    var fabs = document.querySelectorAll('.fixed-action-btn');
+    if (window.M && M.FloatingActionButton && fabs.length) {
+      M.FloatingActionButton.init(fabs, {
+        direction: 'left',    // 'top', 'left', 'right' según prefieras
+        hoverEnabled: false   // false = abrir con clic (mejor en móviles)
+      });
+    } else if (fabs.length) {
+      // Fallback ligero si Materialize JS no está cargado: toggle manual
+      fabs.forEach(function(fab){
+        var trigger = fab.querySelector('.btn-floating');
+        var list = fab.querySelector('ul');
+        trigger && trigger.addEventListener('click', function(e){
+          fab.classList.toggle('active');
+        });
+        // cerrar al clickar fuera
+        document.addEventListener('click', function(ev){
+          if (!fab.contains(ev.target)) fab.classList.remove('active');
+        });
+      });
+    }
+
+    // 3) Comportamiento del botón de Contacto:
+    //    - Si estamos en la misma página y existe #contactForm -> hacer scroll suave
+    //    - Si no existe -> dejar que el href navegue a Contacto.html#contactForm
+    var contactBtns = document.querySelectorAll('#fab-contact');
+    contactBtns.forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        var target = document.getElementById('contactForm');
+        if (target) {
+          // estamos en la página Contacto: impedir la navegación y hacer smooth scroll
+          e.preventDefault();
+          // cerrar el FAB si está abierto (compatibilidad con Materialize)
+          var parent = btn.closest('.fixed-action-btn');
+          if (parent) parent.classList.remove('active');
+
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          // enfocar primer campo útil
+          var first = target.querySelector('input, textarea, select, button');
+          if (first) {
+            // pequeño timeout para asegurar que el scroll terminó en navegadores lentos
+            setTimeout(function(){ first.focus(); }, 400);
+          }
+        }
+        // si no existe #contactForm, dejamos que el enlace haga la navegación a Contacto.html#contactForm
+      });
+    });
+
+  });
+})();
+  </script>
+</body>
+</html>
